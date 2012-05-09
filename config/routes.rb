@@ -1,7 +1,12 @@
 CatsLifeApp::Application.routes.draw do
+
+root :to => 'cats#index'
+
   resources :categories
 
   resources :cats
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
