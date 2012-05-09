@@ -1,0 +1,22 @@
+<%= render 'shared/nav' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <img src= "<%= @cat.image %>"/>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @cat.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%#= Category.find(@cat).catcat %>
+  <%= @cat.category.catcat %>
+</p>
+
+
+<%= link_to 'Edit', edit_cat_path(@cat) %> |
+<%= link_to 'Back', cats_path %>

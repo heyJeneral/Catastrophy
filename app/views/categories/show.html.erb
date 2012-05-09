@@ -1,0 +1,21 @@
+<%= render 'shared/nav' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Catcat:</b>
+  <%= @category.catcat %>
+</p>
+<ul>
+<% @cats.each do |cat| %>
+<p><%= link_to (image_tag cat.image, :size => "100x100"), cat_url(cat) %></p>
+<p><%= cat.name %></p>
+<% end %>	
+	
+</ul>
+
+
+
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
